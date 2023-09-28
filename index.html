@@ -30,11 +30,7 @@
   
           <div class="items-wrapper position-relative  w-75 h-100">
   
-            <img 
-              :src="image[counter]"
-              v-for="image"
-              alt="" 
-              class="item d-none">
+            <img :src="image" alt="" class="item d-none">
             <div class="description w-100 d-none position-absolute bottom-0 end-0 pe-4 text-end text-white bg-dark bg-opacity-50">
               <h3 class="mt-3">{{title}}</h3>
               <p>{{text}}</p>
@@ -44,7 +40,7 @@
   
           <div class="thumbnail w-25 h-100 position-relative">
             <div class="thumb-content h-100">
-              <img :src="image[0]" alt="" class="thumb-item">
+              <img v-for="(element, index) in elements" :src="elements.image" alt="" class="thumb-item">
   
             </div>
   
