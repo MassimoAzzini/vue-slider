@@ -36,12 +36,18 @@ createApp ({
   },
   
   methods:{
+    downUp(isDown){
+
+      isDown ? this.counter++ : this.counter-- 
+
+      if(this.counter === this.elements.length){
+        this.counter = 0;
+      }else if(this.counter < 0){
+      this.counter = this.elements.length - 1;
+      }
+    }
       
 
-  },
-
-  mounted() {
-    
   },
 
 }).mount('#app')

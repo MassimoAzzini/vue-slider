@@ -41,13 +41,13 @@
   
           <div class="thumbnail w-25 h-100 position-relative">
             <div class="thumb-content h-100">
-              <img v-for="(element, index) in elements" :src="element.image" alt="" class="thumb-item">
+              <img v-for="(element, index) in elements" :src="element.image" alt="" :class="{'active' : index === counter}" class="thumb-item">
   
             </div>
   
             
-            <div class="btn-cst up"><i class="fs fa-solid fa-angle-up"></i></div>
-            <div class="btn-cst down"><i class="fa-solid fa-angle-down"></i></div>
+            <div @click="downUp(false)" class="btn-cst up"><i class="fs fa-solid fa-angle-up"></i></div>
+            <div @click="downUp(true)" class="btn-cst down"><i class="fa-solid fa-angle-down"></i></div>
           </div>
           
         </div>
