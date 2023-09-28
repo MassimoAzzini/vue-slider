@@ -41,7 +41,7 @@
   
           <div class="thumbnail w-25 h-100 position-relative">
             <div class="thumb-content h-100">
-              <img v-for="(element, index) in elements" :src="element.image" alt="" :class="{'active' : index === counter}" class="thumb-item">
+              <img v-for="(element, index) in elements" :src="element.image" alt="" :class="{'active' : index === counter}" class="thumb-item" @click="counter = index">
   
             </div>
   
