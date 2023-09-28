@@ -45,7 +45,12 @@ createApp ({
       }else if(this.counter < 0){
       this.counter = this.elements.length - 1;
       }
-    }
+    };
+
+    setInterval( function() {
+      downUp()
+    }, 1000);
+
       
 
   },
