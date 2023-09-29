@@ -31,7 +31,8 @@ createApp ({
         },
       ],
       counter: 0,
-      runAutoSlide: true
+      runAutoSlide: true,
+      goNext: true
      }
 
   },
@@ -51,7 +52,9 @@ createApp ({
 
   mounted() {
     setInterval(() =>{
-      if(this.runAutoSlide) this.downUp(true)
+      if(this.runAutoSlide) 
+      {this.downUp(this.goNext);
+      }
     }, 1000)
 
   },
